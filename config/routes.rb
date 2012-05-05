@@ -5,6 +5,8 @@ WishList::Application.routes.draw do
 
   resources :users
 
+  root :to => 'main#homepage'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
