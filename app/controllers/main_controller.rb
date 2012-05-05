@@ -2,7 +2,11 @@ class MainController < ApplicationController
 
 
   def homepage
-    render :text => "it works"
+    @user = User.new
+  end
+
+  def login
+    render :json => { :success => true , :message => "HELLO" }
   end
 
 end

@@ -1,4 +1,6 @@
 WishList::Application.routes.draw do
+  resources :wishes
+
   resources :user_hobbies
 
   resources :hobbies
