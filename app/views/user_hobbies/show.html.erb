@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @user_hobby.user_id %>
+</p>
+
+<p>
+  <b>Hobby:</b>
+  <%= @user_hobby.hobby_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_hobby_path(@user_hobby) %> |
+<%= link_to 'Back', user_hobbies_path %>

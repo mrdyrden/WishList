@@ -1,0 +1,25 @@
+<h1>Listing user_hobbies</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Hobby</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_hobbies.each do |user_hobby| %>
+  <tr>
+    <td><%= user_hobby.user_id %></td>
+    <td><%= user_hobby.hobby_id %></td>
+    <td><%= link_to 'Show', user_hobby %></td>
+    <td><%= link_to 'Edit', edit_user_hobby_path(user_hobby) %></td>
+    <td><%= link_to 'Destroy', user_hobby, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User hobby', new_user_hobby_path %>
