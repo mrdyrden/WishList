@@ -9,6 +9,8 @@ WishList::Application.routes.draw do
 
   root :to => 'main#homepage'
 
+  match 'wishes/:id/show_relevant_users', :to => 'Wishes#show_relevant_users', :as => 'show_relevant_users'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

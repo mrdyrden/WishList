@@ -1,5 +1,5 @@
-<header>User Login Page</header>
-<%= form_for @user, :controller => "main", :action => "login", :remote => true do |f| %>
+<header>Make your wish page</header>
+<%= form_for @wish, :controller => "main", :remote => true do |f| %>
   <%= f.text_field :email %><br />
   <%= f.text_field :password %><br />
   <%= f.submit "Login" %><br />
