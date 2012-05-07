@@ -44,7 +44,7 @@ class WishesController < ApplicationController
 
     respond_to do |format|
       if @wish.save
-        format.html { render :action => 'show_relevant_users', :notice => 'Wish was successfully created.' }
+        format.html { redirect_to @wish, :notice => 'Wish was successfully created.' }
         format.json { render :json => @wish, :status => :created, :location => @wish }
       else
         format.html { render :action => "new" }

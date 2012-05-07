@@ -1,6 +1,7 @@
-<header>Make your wish page</header>
+<header>
+<h1>Make your wish</h1>
+</header>
 <%= form_for @wish, :controller => "main", :remote => true do |f| %>
-  <%= f.text_field :email %><br />
-  <%= f.text_field :password %><br />
-  <%= f.submit "Login" %><br />
+  <%= f.text_field :name %><br />
+  <%= f.submit "Wish" %><br />
 <% end %>
