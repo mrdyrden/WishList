@@ -14,6 +14,7 @@ class WishesController < ApplicationController
   # GET /wishes/1.json
   def show
     @wish = Wish.find(params[:id])
+    @user = User.all
 
     respond_to do |format|
       format.html # show.html.erb
@@ -44,7 +45,7 @@ class WishesController < ApplicationController
 
     respond_to do |format|
       if @wish.save
-        format.html { redirect_to @wish, :notice => 'Wish was successfully created.' }
+        format.html { redirect_to wishes_path, :notice => 'Wish was successfully created.' }
         format.json { render :json => @wish, :status => :created, :location => @wish }
       else
         format.html { render :action => "new" }
