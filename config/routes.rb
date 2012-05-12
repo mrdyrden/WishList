@@ -7,7 +7,9 @@ WishList::Application.routes.draw do
 
   resources :users
 
-  root :to => 'wishes#new'
+  match 'new_wish'=> 'wishes#new'
+
+  root :to => "Wishes#new"
 
   #match 'wishes/:id/show_relevant_users', :to => 'Wishes#show_relevant_users', :as => 'show_relevant_users'
 
